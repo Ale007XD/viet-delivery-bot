@@ -70,7 +70,9 @@ class Product(Base):
 
     name: Mapped[str] = mapped_column(String(200), nullable=False)
     description: Mapped[str | None] = mapped_column(String(1000), nullable=True)
-    price: Mapped[int] = mapped_column(Integer, nullable=False)  # minor units (e.g. VND, no decimals)
+    price: Mapped[int] = mapped_column(
+        Integer, nullable=False
+    )  # minor units (e.g. VND, no decimals)
     sort: Mapped[int] = mapped_column(Integer, nullable=False, default=0)
 
     # time-of-day axis only — no fulfillment override exists at product level

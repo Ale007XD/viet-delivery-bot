@@ -1,0 +1,1 @@
+# This makes app.domains a package so menu.py is a submodule

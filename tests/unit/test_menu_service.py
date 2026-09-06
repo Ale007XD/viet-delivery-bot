@@ -22,8 +22,8 @@ def test_current_period_boundary_is_exclusive_on_morning_end() -> None:
     # MORNING_END_HOUR itself belongs to "evening" — [start, end) convention,
     # asserted explicitly so a future off-by-one doesn't slip in unnoticed.
     from datetime import datetime
-    from zoneinfo import ZoneInfo
     from unittest.mock import patch
+    from zoneinfo import ZoneInfo
 
     tz = "Asia/Ho_Chi_Minh"
     just_before = datetime(2026, 1, 1, MORNING_END_HOUR - 1, 59, tzinfo=ZoneInfo(tz))

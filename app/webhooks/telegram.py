@@ -6,7 +6,6 @@ from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.db import get_session
 from app.domains.models import TenantBot
-from app.services.order_service import OrderService
 
 router = APIRouter()
 
